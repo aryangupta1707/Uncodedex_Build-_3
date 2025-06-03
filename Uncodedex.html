@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncodedex | Corporate Training & Software Development</title>
+    <link rel="icon" href="./logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#home" class="logo"><img src='./logo.png' ;" alt="Uncodedex Logo">Uncodedex</a>
+
+            <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#courses">Courses</a>
+                <a href="#about">About Us</a>
+                <a href="#trainers-section">Trainers</a>
+                <a href="#faq">FAQ</a>
+                <a href="#portfolio">Portfolio</a>
+                <!-- <a href="#testimonials">Testimonials</a> -->
+                <a href="#contact">Contact</a>
+                <button id="search-icon-btn" class="search-icon-btn" aria-label="Search"><i
+                        class="fas fa-search"></i></button>
+            </nav>
+            <div id="search-bar" class="search-bar">
+                <input type="text" id="search-input" placeholder="Search courses, articles, etc...">
+                <button id="search-submit-btn" aria-label="Perform Search"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <nav id="mobile-menu" class="mobile-nav">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About Us</a>
+            <a href="#trainers-section">Trainers</a>
+            <!-- <a href="#faq">FAQ</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#testimonials">Testimonials</a> -->
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 id="hero-heading">
+            </h1>
+            <p>
+                We provide top-tier trainers to colleges for cutting-edge programming skills and craft bespoke websites
+                that bring your vision to life.
+            </p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">
+                    Explore Our Services
+                </a>
+                <a href="https://forms.gle/RDs4GqwwFrsQZcS46" class="btn-secondary">
+                    Get a Free Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-gray-50">
+        <div class="container">
+            <h2 class="section-heading animate-on-scroll">Our Core Services</h2>
+
+            <div class="services-grid">
+                <div class="service-card training-card animate-on-scroll">
+                    <div class="icon-placeholder"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>College Training Programs</h3>
+                    <p>
+                        We deploy highly skilled trainers to colleges, offering comprehensive programs in the latest
+                        technologies to empower students for industry success.
+                    </p>
+                    <ul>
+                        <li>HTML, CSS, JavaScript, React JS</li>
+                        <li>Java, SQL, Data Structures & Algorithms (DSA)</li>
+                        <li>Python, Machine Learning, Data Science</li>
+                        <li>Customized curriculum as per college needs</li>
+                        <li>**Integrated LMS Support**</li>
+                    </ul>
+                    <div class="btn-center">
+                        <a href="#courses" class="btn-primary">
+                            Explore Training Courses
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card webdev-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="icon-placeholder"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Custom Website Development</h3>
+                    <p>
+                        From dynamic e-commerce platforms to elegant portfolio sites, we build responsive,
+                        high-performance websites tailored to your unique business goals.
+                    </p>
+                    <ul>
+                        <li>Responsive & User-Friendly Design</li>
+                        <li>E-commerce Solutions & Online Stores</li>
+                        <li>Business & Corporate Websites</li>
+                        <li>Portfolio & Personal Branding Sites</li>
+                        <li>**Project Management Integration**</li>
+                    </ul>
+                    <div class="btn-center">
+                        <a href="#portfolio" class="btn-primary">
+                            View Our Web Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="bg-white">
+        <div class="container">
+            <h2 class="section-heading animate-on-scroll">Our Popular Courses</h2>
+            <p class="text-center text-lg text-gray-700 mb-8 animate-on-scroll">
+                Browse our comprehensive training programs designed for students and professionals.
+            </p>
+            <div class="courses-grid">
+                <div class="course-card animate-on-scroll">
+                    <div class="icon-placeholder"><i class="fab fa-java"></i></div>
+                    <h3>Advanced Java & Spring Boot</h3>
+                    <p>Master enterprise-level Java development with Spring Framework.</p>
+                    <button class="btn-primary" onclick="openInfoModal('courseJava')">Learn More</button>
+                </div>
+                <div class="course-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="icon-placeholder"><i class="fab fa-python"></i></div>
+                    <h3>Python for Data Science</h3>
+                    <p>From basics to advanced machine learning and data visualization.</p>
+                    <button class="btn-primary" onclick="openInfoModal('coursePython')">Learn More</button>
+                </div>
+                <div class="course-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="icon-placeholder"><i class="fab fa-react"></i></div>
+                    <h3>React JS Frontend Development</h3>
+                    <p>Build modern, responsive single-page applications with React.</p>
+                    <button class="btn-primary" onclick="openInfoModal('courseReact')">Learn More</button>
+                </div>
+                <div class="course-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="icon-placeholder"><i class="fas fa-database"></i></div>
+                    <h3>SQL & Database Management</h3>
+                    <p>Essential skills for working with relational databases and data querying.</p>
+                    <button class="btn-primary" onclick="openInfoModal('courseSQL')">Learn More</button>
+                </div>
+                <div class="course-card animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="icon-placeholder"><i class="fas fa-cubes"></i></div>
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Problem-solving techniques crucial for technical interviews and efficient coding.</p>
+                    <button class="btn-primary" onclick="openInfoModal('courseDSA')">Learn More</button>
+                </div>
+                <div class="course-card animate-on-scroll" style="animation-delay: 0.5s;">
+                    <div class="icon-placeholder"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Computing Fundamentals</h3>
+                    <p>Introduction to cloud platforms like AWS, Azure, and Google Cloud.</p>
+                    <button class="btn-primary" onclick="openInfoModal('courseCloud')">Learn More</button>
+                </div>
+            </div>
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="#contact" class="btn-primary">Request Custom Training</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container max-w-4xl">
+            <h2 class="section-heading animate-on-scroll">About Uncodedex</h2>
+            <p class="animate-on-scroll">
+                At Uncodedex, we believe that learning to code
+                shouldn't be complicated. We're a community-driven platform built by passionate developers and educators
+                who
+                love making programming simple, fun, and practical.
+
+                Our goal is to bridge the gap between theory and real-world coding by offering bite-sized content,
+                engaging
+                videos, and hands-on learning experiences in Java, Python, JavaScript, and more. Whether you're a
+                student, a
+                job-seeker, or just curious about tech — Uncodedex is here to help you grow.we leverage our expertise to
+                craft exceptional web solutions for businesses, helping them establish a strong digital presence.
+            </p>
+            <p class="animate-on-scroll" style="animation-delay: 0.2s;">
+                We believe in practical, hands-on learning and delivering tangible results, whether it's through our
+                comprehensive training modules or our innovative website development projects.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-gray-50">
+        <div class="container">
+            <h2 class="section-heading animate-on-scroll">Why Choose Uncodedex?</h2>
+            <div class="features-grid">
+                <div class="feature-card feature-expert animate-on-scroll">
+                    <div class="icon-placeholder"><i class="fas fa-user-tie"></i></div>
+                    <h3>Experienced Trainers</h3>
+                    <p>Our trainers are industry veterans with practical experience, ensuring students learn real-world
+                        skills.</p>
+                </div>
+                <div class="feature-card feature-custom animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="icon-placeholder"><i class="fas fa-cogs"></i></div>
+                    <h3>Customized Solutions</h3>
+                    <p>Whether it's a training curriculum or a website, we tailor our services to your specific needs.
+                    </p>
+                </div>
+                <div class="feature-card feature-support animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="icon-placeholder"><i class="fas fa-headset"></i></div>
+                    <h3>Dedicated Support</h3>
+                    <p>We provide continuous support and communication throughout our engagements.</p>
+                </div>
+                <div class="feature-card feature-hands-on animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="icon-placeholder"><img src="hands-on.experience.svg" alt=""></i></div>
+                    <h3>Hands-on Experience</h3>
+                    <p>Gain practical skills through real-world projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="numbers-section animate-on-scroll">
+        <div class="container">
+            <h2 class="section-heading" style="color: #fff;">Our Impact in Numbers</h2>
+            <div class="numbers-grid">
+                <div class="number-item">
+                    <h3 id="trainers-count" data-target="13">0</h3>
+                    <p>Expert Trainers Hired</p>
+                </div>
+                <div class="number-item">
+                    <h3 id="websites-count" data-target="108">0</h3>
+                    <p>Websites Developed</p>
+                </div>
+                <div class="number-item">
+                    <h3 id="students-count" data-target="3065">0</h3>
+                    <p>Students Trained Annually</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers-section" class="trainer-profiles-section">
+        <div class="container">
+            <h2 class="section-heading animate-on-scroll">Meet Our Expert Trainers</h2>
+            <p class="text-center text-lg text-gray-700 mb-8 animate-on-scroll">
+                Learn from industry veterans and passionate educators who are committed to your success.
+            </p>
+            <div class="trainer-grid">
+                <div class="trainer-card animate-on-scroll">
+                    <img src="./Aryan Gupta.png" alt="Aryan Gupta">
+                    <h3>Aryan Gupta</h3>
+                    <p class="specialty">Software Engineer</p>
+                    <p><strong>5+ years of expertise in corporate training</strong>, empowering students across
+                        <strong>colleges and educational institutes</strong> with
+                        <strong>practical, industry-driven development solutions</strong> and real-world project
+                        exposure.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="trainer-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <img src="./Abhay Kumar.png" alt="Alice Smith">
+                    <h3>Abhay Chaurasia</h3>
+                    <p class="specialty">Frontend Developer</p>
+                    <p><strong>3+ years of professional experience as a Frontend Developer</strong>, building responsive and user-centric web applications for diverse industries. Proven track record in collaborating with cross-functional teams to deliver <strong>modern UI/UX solutions</strong> using <strong>HTML, CSS, JavaScript, React, and related technologies</strong>. Focused on crafting high-performance, scalable interfaces aligned with industry best practices.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="trainer-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <img src="./Hrishikesh Dey.png" alt="Michael Johnson">
+                    <h3>Hrishikesh Dey</h3>
+                    <p class="specialty">FullStack Developer</p>
+                    <p><strong>3+ years of experience as a Full Stack Developer</strong>, delivering
+    <strong>comprehensive software solutions</strong> across the stack, from front-end interfaces to robust back-end systems.
+    Proven expertise in <strong>industry-based application development</strong> and hands-on experience in mentoring
+    and guiding <strong>college students and professionals</strong> through real-world projects and practical training.</p>
+
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="trainer-card animate-on-scroll">
+                    <img src="./Aditya Gupta.png" alt="Aryan Gupta">
+                    <h3>Aditya Gupta</h3>
+                    <p class="specialty">Trainee Java Developer</p>
+                    <p><strong>1+ year of hands-on experience as a Junior Java Developer</strong>, contributing to the development of scalable applications and backend systems. Proven ability to apply <strong>industry-relevant development practices</strong> and work on <strong>real-world projects</strong> in collaborative, Agile environments. Passionate about writing clean, maintainable Java code and continuously learning new technologies to enhance software solutions.</p>
+
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="#contact" class="btn-primary">Become a Trainer</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-heading animate-on-scroll">Frequently Asked Questions</h2>
+            <p class="text-center text-lg text-gray-700 mb-8 animate-on-scroll">
+                Find quick answers to common questions about our services and programs.
+            </p>
+            <div class="faq-accordion animate-on-scroll">
+                <div class="faq-item">
+                    <button class="accordion-header">
+                        How do your college training programs work? <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>We partner with colleges to provide on-campus or online training. Our expert trainers deliver
+                            customized curricula, typically ranging from 4-12 weeks, focusing on hands-on practical
+                            skills. We can integrate with your LMS and provide regular progress reports.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="accordion-header">
+                        What technologies do you specialize in for web development? <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Our web development team specializes in modern frameworks and languages including React.js,
+                            Node.js, Python (Django/Flask), Java (Spring Boot), HTML5, CSS3, JavaScript, and various
+                            database technologies like MongoDB and SQL.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="accordion-header">
+                        Do you offer job placement assistance after training? <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>While we don't guarantee placements, we provide extensive career support including resume
+                            building, mock interviews, networking opportunities, and connecting students with our
+                            industry partners for potential job openings.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="accordion-header">
+                        How can I get a quote for a custom website? <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>You can request a free consultation by filling out the contact form on our website. We'll
+                            discuss your project requirements in detail and provide a tailored proposal and quote based
+                            on your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers" class="trainers-cta animate-on-scroll">
+        <div class="container">
+            <h2>Are You an Expert Trainer?</h2>
+            <p>
+                Join our growing team of passionate educators and help shape the future of tech talent. We're looking
+                for experienced professionals in various programming languages and web technologies.
+            </p>
+            <a href="https://forms.gle/2Dq7rmJbdtCW9e54A" class="btn-primary">
+                Apply to Be a Trainer
+            </a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="bg-white">
+        <div class="container text-center">
+            <h2 class="section-heading animate-on-scroll">Our Work & Success Stories</h2>
+            <p class="text-lg text-gray-700 mb-8 animate-on-scroll">
+                Explore some of our recent website development projects and success stories from our college training
+                programs.
+            </p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item project-a animate-on-scroll">
+                    <div class="project-placeholder"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4vhkUk47QrrdD3PndZhxfkh2UuWvRE5gpA2Y0PeR8ZwTuaRTq9BTKB_oxwD9j2g-GFQ&usqp=CAU"
+                            alt="E-commerce Platform Preview"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x256/d1d5db/6b7280?text=E-commerce+Platform';">
+                    </div>
+                    <h3>E-commerce Platform for Retailer</h3>
+                    <p>A robust online store with secure payment integration and intuitive user experience.</p>
+                    <button class="btn-primary" onclick="openPortfolioDetailsModal('ecommerce')">View Details</button>
+                </div>
+                <div class="portfolio-item project-b animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="project-placeholder"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS85hGXVK5QcRaRUlkbciGQbWW7abk1un-Ddg&s"
+                            alt="Corporate Website Preview"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x256/d1d5db/6b7280?text=Corporate+Website';">
+                    </div>
+                    <h3>Corporate Website for Tech Firm</h3>
+                    <p>Modern, responsive, and SEO-optimized site showcasing services and expertise.</p>
+                    <button class="btn-primary" onclick="openPortfolioDetailsModal('corporate')">View Details</button>
+                </div>
+                <div class="portfolio-item project-c animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="project-placeholder"><img
+                            src="https://www.dsaict.eu/web/image/website/1/logo?unique=b9b8e5d"
+                            alt="DSA Training Preview" style="height: 100%;"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x256/d1d5db/6b7280?text=DSA+Training';">
+                    </div>
+                    <h3>DSA Training for Engineering College</h3>
+                    <p>Successful 6-week intensive Data Structures & Algorithms program, boosting student placements.
+                    </p>
+                    <button class="btn-primary" onclick="openPortfolioDetailsModal('dsaTraining')">View Details</button>
+                </div>
+            </div>
+            <a href="#" class="btn-primary view-all-button animate-on-scroll" onclick="openInfoModal('allCaseStudies')">
+                View All Case Studies
+            </a>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-heading animate-on-scroll">What Our Clients Say</h2>
+            <div class="testimonial-carousel-container">
+                <div class="testimonial-carousel" id="testimonial-carousel">
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Uncodedex transformed our students' skill sets. The trainers were exceptional, and the
+                            curriculum was perfectly aligned with industry needs. Highly recommended!"</p>
+                        <div class="testimonial-author">- Dr. Priya Sharma, Head of Dept., XYZ College</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll" style="animation-delay: 0.1s;">
+                        <p>"We needed a complex e-commerce site, and Uncodedex delivered beyond our expectations. Their
+                            web development team is professional, efficient, and truly understood our vision."</p>
+                        <div class="testimonial-author">- Rajesh Kumar, CEO, Innovate Retail</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll" style="animation-delay: 0.2s;">
+                        <p>"The Python training provided by Uncodedex was incredibly practical and engaging. Our
+                            students gained hands-on experience that directly led to better placement opportunities."
+                        </p>
+                        <div class="testimonial-author">- Prof. Alok Singh, Placement Coordinator, ABC University</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll" style="animation-delay: 0.3s;">
+                        <p>"Our new corporate website is sleek, modern, and incredibly user-friendly. Uncodedex's
+                            attention to detail and communication throughout the project were outstanding."</p>
+                        <div class="testimonial-author">- Sarah Chen, Marketing Director, Global Solutions Inc.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" id="testimonial-dots">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container contact-form-container">
+            <h2 class="section-heading animate-on-scroll">Get in Touch</h2>
+            <p class="text-center text-lg text-gray-700 mb-8 animate-on-scroll">
+                Have a question about our training programs or need a custom website? We'd love to hear from you!
+            </p>
+            <form id="contact-form" class="contact-form animate-on-scroll">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Interested In:</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a Service --</option>
+                        <option value="college_training">College Training Programs</option>
+                        <option value="website_development">Website Development</option>
+                        <option value="join_team">Joining Your Team (Trainer)</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell us more about your needs..."
+                        required></textarea>
+                </div>
+                <div class="form-submit-button">
+                    <button type="submit" class="btn-primary">
+                        <a href="https://forms.gle/WXZVpn5azaPz6Jje7">Connect with us</a>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Uncodedex is dedicated to empowering futures through expert training and innovative web solutions.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#trainers-section">Trainers</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Uncodedex pvt ltd. HSR layout, sector 1, 560102</p>
+                <p><i class="fas fa-phone"></i> +91 9140737576 / 9798169076</p>
+                <p><i class="fas fa-envelope"></i> uncodedex@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/uncodedex" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.x.com/uncodedex" target="_blank" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/uncodedex" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/uncodedex" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Uncodedex. All rights reserved. | Made with ❤️ by Uncodedex</p>
+        </div>
+    </footer>
+
+    <div id="success-modal" class="modal" role="dialog" aria-labelledby="successModalTitle" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close-button" role="button" aria-label="Close dialog">&times;</span>
+            <h3 id="successModalTitle">Message Sent Successfully!</h3>
+            <p>Thank you for your message. We will get back to you shortly.</p>
+            <button class="btn-primary" onclick="closeModal('success-modal')">Close</button>
+        </div>
+    </div>
+
+    <div id="info-modal" class="modal" role="dialog" aria-labelledby="infoModalTitle" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close-button" role="button" aria-label="Close dialog">&times;</span>
+            <h3 id="infoModalTitle"></h3>
+            <p id="infoModalMessage"></p>
+            <button class="btn-primary" onclick="closeModal('info-modal')">Got It!</button>
+        </div>
+    </div>
+
+    <div id="portfolio-details-modal" class="modal" role="dialog" aria-labelledby="portfolioDetailsModalTitle"
+        aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close-button" role="button" aria-label="Close dialog">&times;</span>
+            <img id="portfolioDetailsImage" src="" alt="Project Image">
+            <h3 id="portfolioDetailsModalTitle">Project Title</h3>
+            <p id="portfolioDetailsDescription">This is a detailed description of the project.</p>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <h4>Client Challenge:</h4>
+                    <p id="portfolioDetailsChallenge"></p>
+                </div>
+                <div class="detail-item">
+                    <h4>Our Solution:</h4>
+                    <p id="portfolioDetailsSolution"></p>
+                </div>
+                <div class="detail-item">
+                    <h4>Technologies Used:</h4>
+                    <ul id="portfolioDetailsTech" class="tech-list"></ul>
+                </div>
+                <div class="detail-item">
+                    <h4>Results Achieved:</h4>
+                    <p id="portfolioDetailsResults"></p>
+                </div>
+            </div>
+            <!-- <button class="btn-primary mt-6" onclick="closeModal('portfolio-details-modal')">Close</button> -->
+        </div>
+    </div>
+
+    <div id="chat-button" class="chat-button" role="button" aria-label="Open chat">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V3a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+    </div>
+
+    <div id="chat-modal" class="modal" role="dialog" aria-labelledby="chatModalTitle" aria-modal="true">
+        <div class="modal-content">
+            <span class="modal-close-button" role="button" aria-label="Close chat">&times;</span>
+            <h3 id="chatModalTitle">Chat with Uncodedex AI</h3>
+            <div id="chat-history">
+                <div class="chat-message bot">Hello! How can I help you today?</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message..." aria-label="Chat input">
+                <button id="send-chat-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="back-to-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="./App.js"></script>
+
+</body>
+
+</html>
